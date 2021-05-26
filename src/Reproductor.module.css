@@ -17,7 +17,8 @@ h2 {
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
 }
 
 button {
@@ -26,7 +27,6 @@ button {
   outline: none;
   color: aliceblue;
   transition: transform .1s;
-  margin-right: 0.6rem;
 }
 
 button:hover {
@@ -34,6 +34,7 @@ button:hover {
   transform: scale(1.09);
 }
 
-.volume {
-  border: none;
+.tempo {
+  font-size: 0.5rem;
+
 }

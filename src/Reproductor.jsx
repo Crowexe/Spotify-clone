@@ -26,15 +26,24 @@ const Reproductor = () => {
         {audio}
         <h2>{name}</h2>
       </div>
-      <div className="buttons">
+      <div>
         <button onClick={state.paused ? controls.play : controls.pause}>
             {state.paused ? <i class="fas fa-play"/> : <i class="fas fa-pause"/>}
-        </button>     
+        </button>
+          <span>{state.time.toFixed(2)}</span>
+          <input
+            type="range"
+            value={state.time}
+            onChange={(e) => controls.seek(Number(e.target.value))}
+            min="0.0"
+            max={state.duration}
+            step="0.05"
+          />      
+ 
         <button onClick={() => setCurrentSong({ previewURL: "", name: "" })}>
           <i class="fas fa-ban" />
-        </button>              
-          {state.time ? <h3>{state.time}</h3> : <h4>loading...</h4>}  
-      </div>
+        </button>
+      </div>   
       <div className={styles.buttons}>
         <input
           className="volume"
