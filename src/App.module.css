@@ -1,0 +1,70 @@
+
+
+text {
+  align-items: baseline;
+  gap: 1rem;
+  display: flex;
+  font-size: 1.7rem;
+  text-align: center;
+  background: #1db954;
+  padding: 0.6rem 0.6rem;
+  padding-left: 50%;
+  padding-right: 50%;
+  color: aliceblue;
+  top: 0;
+  position: relative;
+}
+
+.nav {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(20, 20, 20);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.nav i {
+  margin-right: 0.8rem;
+}
+
+/* Sidebar links */
+.nav .link {
+  display: block;
+  color: aliceblue;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.nav .link.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.nav link:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .nav link {
+    text-align: center;
+    float: none;
+  }
+}
